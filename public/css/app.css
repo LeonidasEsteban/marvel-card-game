@@ -56,6 +56,9 @@ body {
   display: flex;
   margin-bottom: 0.5em;
 }
+.Layout-battleRow:first-child {
+  transform: rotate(180deg);
+}
 .Layout-battleRow:last-child {
   margin-bottom: 0;
 }
@@ -87,18 +90,39 @@ body {
 .Card {
   border: 1px solid #f00;
   box-sizing: border-box;
-  padding: 0.5em;
+  background: #c2ac37;
   border: 5px solid #675f6e;
   border-radius: 0.5em;
-  background: #c2ac37;
-  width: 150px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   cursor: pointer;
-  transition: 0.3s;
+  padding: 0.5em;
   transform: translate3d(0, 0, 0);
+  transition: 0.3s;
+  width: 150px;
+}
+.Card--antagonist .Card-container {
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+.Card--antagonist .Card-backface {
+  transform: rotateY(0);
 }
 .Card--player:hover {
   transform: translate3d(0, -50px, 0);
+}
+.Card-backface {
+  background-color: #d8232a;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url("../images/logo.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .Card-name {
   margin: 0 0 0.5em;

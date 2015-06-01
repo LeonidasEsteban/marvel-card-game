@@ -47,6 +47,8 @@ body
             justify-content space-between
             display flex
             margin-bottom .5em
+            &:first-child 
+                transform rotate(180deg)
             &:last-child
                 margin-bottom 0
     &-antagonist
@@ -71,19 +73,38 @@ body
 
 .Card
     test()
-    padding .5em
+    background #C2AC37
     border 5px solid #675F6E
     border-radius .5em
-    background #C2AC37
-    width 150px
     box-shadow 0 0 10px rgba(black,.5)
     cursor pointer
-    transition .3s
+    padding .5em
     transform translate3d(0,0,0) 
+    transition .3s
+    width 150px
+    &--antagonist
+        .Card-container
+            backface-visibility hidden
+            transform rotateY(180deg)
     
+        .Card-backface
+            transform rotateY(0)
     &--player
         &:hover
             transform translate3d(0,-50px,0) 
+    &-backface
+        background-color #D8232A
+        backface-visibility hidden
+        transform rotateY(180deg)
+        position absolute
+        left 0 
+        right 0
+        top 0
+        bottom 0
+        background-image url('../images/logo.jpg')
+        background-size 100%
+        background-repeat no-repeat
+        background-position center
     &-name
         margin 0 0 .5em
         font-size .8em

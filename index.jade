@@ -13,6 +13,7 @@ html(lang="es")
                 div(class="Layout-status") left
                 div(class="Layout-battle")
                     div(class="Layout-battleColumn")
+                        - var clase = ""
                         div(class="Layout-battleRow")
                             each card in [1,2,3,4,5]
                                 include ./lib/card/template.jade
