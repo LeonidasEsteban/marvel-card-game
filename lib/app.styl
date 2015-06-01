@@ -2,129 +2,27 @@ test(color = red)
     border 1px solid color
     box-sizing border-box
 
+color-borders = #675F6E
+
+
+
+@import "./card/styles.styl"
+@import "./phase/styles.styl"
+@import "./layout/styles.styl"
+@import "./status/styles.styl"
+
 body
     margin 0
     background-color #B0DBC4
     background-image url('../images/city.jpg')
     background-size cover
     font-family "Open Sans"
-.Layout
-    display flex
-    flex-direction column
-    min-height 100vh
-    justify-content space-between
-    > *
-        margin 10px 
-        test()
-    &-main
-        display flex
-        test(green)
-        justify-content space-between
-        padding .5em
-    &-status
-    &-phases
-        width 200px
-        padding .5em
-        test(orange)
-    &-battle
-        flex 1
-        test(purple)
-        padding .5em
-        margin 0 .5em
-        -webkit-perspective 400
-        -webkit-perspective-origin-y top
-        &Column
-            test()
-            margin .5em
-            background url('../images/pattern.jpg')
-            transform rotateX(10deg)
-            transform-origin top
-            display flex
-            flex-direction column
-            justify-content space-between
-            padding .5em
-        &Row
-            justify-content space-between
-            display flex
-            margin-bottom .5em
-            &:first-child 
-                transform rotate(180deg)
-            &:last-child
-                margin-bottom 0
-    &-antagonist
-        test(brown)
-        display flex
-        justify-content center
-        > *
-            test()
-            margin 10px
-            padding .5em
-    &-player
-        test(black)
-        display flex
-        justify-content center
-        position relative
-        > *
-            test()
-            margin 10px
-            padding .5em
+
             
 
 
-.Card
-    test()
-    background #C2AC37
-    border 5px solid #675F6E
-    border-radius .5em
-    box-shadow 0 0 10px rgba(black,.5)
-    cursor pointer
-    padding .5em
-    transform translate3d(0,0,0) 
-    transition .3s
-    width 150px
-    &--antagonist
-        .Card-container
-            backface-visibility hidden
-            transform rotateY(180deg)
-    
-        .Card-backface
-            transform rotateY(0)
-    &--player
-        &:hover
-            transform translate3d(0,-50px,0) 
-    &-backface
-        background-color #D8232A
-        backface-visibility hidden
-        transform rotateY(180deg)
-        position absolute
-        left 0 
-        right 0
-        top 0
-        bottom 0
-        background-image url('../images/logo.jpg')
-        background-size 100%
-        background-repeat no-repeat
-        background-position center
-    &-name
-        margin 0 0 .5em
-        font-size .8em
-        color white
-        text-transform uppercase
+
+
+
         
-    &-image
-        border 5px solid #675F6E
-        width 100%
-        box-sizing border-box
-    &-description
-        background white
-        font-size .5em
-        padding .3em
-        border 2px solid #675F6E
-        margin-bottom .5em
-    &-attack
-        font-size .5em
-        float right
-        color white
-        background black
-        padding .5em
-        
+

@@ -1,0 +1,57 @@
+.Card
+    test()
+    background #C2AC37
+    border 5px solid color-borders
+    border-radius .5em
+    box-shadow 0 0 10px rgba(black,.5)
+    cursor pointer
+    padding .5em
+    transform translate3d(0,0,0) 
+    transition .3s
+    width 150px
+    &--antagonist
+        .Card-container
+            backface-visibility hidden
+            transform rotateY(180deg)
+    
+        .Card-backface
+            transform rotateY(0)
+    &--player
+        &:hover
+            transform translate3d(0,-50px,0) 
+    &-backface
+        background-color #D8232A
+        backface-visibility hidden
+        transform rotateY(180deg)
+        position absolute
+        left 0 
+        right 0
+        top 0
+        bottom 0
+        background-image url('../images/logo.jpg')
+        background-size 100%
+        background-repeat no-repeat
+        background-position center
+    &-name
+        margin 0 0 .5em
+        font-size .8em
+        color white
+        text-transform uppercase
+        
+    &-image
+        border 5px solid color-borders
+        width 100%
+        box-sizing border-box
+    &-description
+        background white
+        font-size .5em
+        padding .3em
+        border 2px solid color-borders
+        margin-bottom .5em
+    &-attack
+        font-size .5em
+        float right
+        color white
+        background black
+        padding .5em
+        
