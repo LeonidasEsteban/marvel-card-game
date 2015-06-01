@@ -1,0 +1,46 @@
+test(color = red)
+    border 1px solid color
+    box-sizing border-box
+
+body
+    margin 0
+
+.Layout
+    display flex
+    flex-direction column
+    min-height 100vh
+    justify-content space-between
+    > *
+        margin 10px 
+        test()
+    &-main
+        display flex
+        test(green)
+        justify-content space-between
+        padding .5em
+    &-status
+    &-phases
+        width 200px
+        padding .5em
+        test(orange)
+    &-battle
+        flex 1
+        test(purple)
+        padding .5em
+        margin 0 .5em
+    &-antagonist
+        test(brown)
+        display flex
+        justify-content center
+        > *
+            test()
+            margin 10px
+            padding .5em
+    &-player
+        test(black)
+        display flex
+        justify-content center
+        > *
+            test()
+            margin 10px
+            padding .5em
