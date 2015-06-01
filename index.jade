@@ -1,7 +1,8 @@
 doctype html
 html(lang="es")
     head
-        link(rel="stylesheet", href="./public/app.css")
+        link(href='http://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet', type='text/css')
+        link(rel="stylesheet", href="./public/css/app.css")
     body
         section(class="Layout")
             section(class="Layout-antagonist")
@@ -9,7 +10,15 @@ html(lang="es")
                     include ./lib/card/template.jade
             section(class="Layout-main")
                 div(class="Layout-status") left
-                div(class="Layout-battle") center
+                div(class="Layout-battle")
+                    div(class="Layout-battleColumn")
+                        div(class="Layout-battleRow")
+                            each card in [1,2,3,4,5]
+                                include ./lib/card/template.jade
+                        div(class="Layout-battleRow")
+                            each card in [1,2,3,4,5]
+                                include ./lib/card/template.jade
+                        
                 div(class="Layout-phases") right
             section(class="Layout-player")
                 each card in [1,2,3,4,5]

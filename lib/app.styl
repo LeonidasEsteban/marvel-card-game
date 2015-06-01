@@ -4,7 +4,9 @@ test(color = red)
 
 body
     margin 0
-
+    // background-color #B0DBC4
+    background-image url('../images/city.jpg')
+    background-size cover
 .Layout
     display flex
     flex-direction column
@@ -28,6 +30,21 @@ body
         test(purple)
         padding .5em
         margin 0 .5em
+        -webkit-perspective 400
+        -webkit-perspective-origin-y top
+        &Column
+            test()
+            margin .5em
+            background url('../images/pattern.jpg')
+            transform rotateX(10deg)
+            transform-origin top
+            display flex
+            flex-direction column
+            justify-content space-between
+            padding .5em
+        &Row
+            justify-content space-between
+            display flex
     &-antagonist
         test(brown)
         display flex
@@ -44,3 +61,14 @@ body
             test()
             margin 10px
             padding .5em
+            
+
+
+.Card
+    test()
+    padding .5em
+    border 5px solid #675F6E
+    border-radius .5em
+    background #8E4F3D
+    width 150px
+    box-shadow 0 0 10px rgba(black,.5)
