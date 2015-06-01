@@ -6,6 +6,7 @@ html(lang="es")
     body
         section(class="Layout")
             section(class="Layout-antagonist")
+                - var clase = "Card--antagonist"
                 each card in [1,2,3,4,5]
                     include ./lib/card/template.jade
             section(class="Layout-main")
@@ -21,5 +22,6 @@ html(lang="es")
                         
                 div(class="Layout-phases") right
             section(class="Layout-player")
+                - var clase = "Card--player"
                 each card in [1,2,3,4,5]
                     include ./lib/card/template.jade

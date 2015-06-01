@@ -1,1 +1,127 @@
-body{margin:0;background-image:url("../images/city.jpg");background-size:cover}.Layout{display:flex;flex-direction:column;min-height:100vh;justify-content:space-between;}.Layout > *{margin:10px;border:1px solid #f00;box-sizing:border-box}.Layout-main{display:flex;border:1px solid #008000;box-sizing:border-box;justify-content:space-between;padding:.5em}.Layout-status,.Layout-phases{width:200px;padding:.5em;border:1px solid #ffa500;box-sizing:border-box}.Layout-battle{flex:1;border:1px solid #800080;box-sizing:border-box;padding:.5em;margin:0 .5em;-webkit-perspective:400;-webkit-perspective-origin-y:top;}.Layout-battleColumn{border:1px solid #f00;box-sizing:border-box;margin:.5em;background:url("../images/pattern.jpg");transform:rotateX(10deg);transform-origin:top;display:flex;flex-direction:column;justify-content:space-between;padding:.5em}.Layout-battleRow{justify-content:space-between;display:flex}.Layout-antagonist{border:1px solid #a52a2a;box-sizing:border-box;display:flex;justify-content:center;}.Layout-antagonist > *{border:1px solid #f00;box-sizing:border-box;margin:10px;padding:.5em}.Layout-player{border:1px solid #000;box-sizing:border-box;display:flex;justify-content:center;}.Layout-player > *{border:1px solid #f00;box-sizing:border-box;margin:10px;padding:.5em}.Card{border:1px solid #f00;box-sizing:border-box;padding:.5em;border:5px solid #675f6e;border-radius:.5em;background:#8e4f3d;width:150px;box-shadow:0 0 10px rgba(0,0,0,0.5)}
+body {
+  margin: 0;
+  background-color: #b0dbc4;
+  background-image: url("../images/city.jpg");
+  background-size: cover;
+  font-family: "Open Sans";
+}
+.Layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+.Layout > * {
+  margin: 10px;
+  border: 1px solid #f00;
+  box-sizing: border-box;
+}
+.Layout-main {
+  display: flex;
+  border: 1px solid #008000;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+.Layout-status,
+.Layout-phases {
+  width: 200px;
+  padding: 0.5em;
+  border: 1px solid #ffa500;
+  box-sizing: border-box;
+}
+.Layout-battle {
+  flex: 1;
+  border: 1px solid #800080;
+  box-sizing: border-box;
+  padding: 0.5em;
+  margin: 0 0.5em;
+  -webkit-perspective: 400;
+  -webkit-perspective-origin-y: top;
+}
+.Layout-battleColumn {
+  border: 1px solid #f00;
+  box-sizing: border-box;
+  margin: 0.5em;
+  background: url("../images/pattern.jpg");
+  transform: rotateX(10deg);
+  transform-origin: top;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+.Layout-battleRow {
+  justify-content: space-between;
+  display: flex;
+  margin-bottom: 0.5em;
+}
+.Layout-battleRow:last-child {
+  margin-bottom: 0;
+}
+.Layout-antagonist {
+  border: 1px solid #a52a2a;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+.Layout-antagonist > * {
+  border: 1px solid #f00;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 0.5em;
+}
+.Layout-player {
+  border: 1px solid #000;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.Layout-player > * {
+  border: 1px solid #f00;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 0.5em;
+}
+.Card {
+  border: 1px solid #f00;
+  box-sizing: border-box;
+  padding: 0.5em;
+  border: 5px solid #675f6e;
+  border-radius: 0.5em;
+  background: #c2ac37;
+  width: 150px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: 0.3s;
+  transform: translate3d(0, 0, 0);
+}
+.Card--player:hover {
+  transform: translate3d(0, -50px, 0);
+}
+.Card-name {
+  margin: 0 0 0.5em;
+  font-size: 0.8em;
+  color: #fff;
+  text-transform: uppercase;
+}
+.Card-image {
+  border: 5px solid #675f6e;
+  width: 100%;
+  box-sizing: border-box;
+}
+.Card-description {
+  background: #fff;
+  font-size: 0.5em;
+  padding: 0.3em;
+  border: 2px solid #675f6e;
+  margin-bottom: 0.5em;
+}
+.Card-attack {
+  font-size: 0.5em;
+  float: right;
+  color: #fff;
+  background: #000;
+  padding: 0.5em;
+}
